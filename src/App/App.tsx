@@ -1,12 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AccountEnter from "../components/AccountEnter";
+import AccountEnter from "../pages/AccountEnter";
+import ConfigUser from "../pages/ConfigUser";
+import {RouteWrapper} from "../RouteWrapper";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AccountEnter />} />
+          <Route path="/" element={ <RouteWrapper isPrivate={false}> <AccountEnter /> </RouteWrapper>} />
+          <Route path="/home" element={ <RouteWrapper isPrivate={true}> <ConfigUser /> </RouteWrapper>} />
       </Routes>
     </BrowserRouter>
   );
