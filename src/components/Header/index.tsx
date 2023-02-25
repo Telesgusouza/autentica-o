@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import Logo from "../Logo";
+
 import * as Styled from "./style";
 
 import testePhotoUser from "../../assets/Facebook.svg";
@@ -14,7 +15,7 @@ import groupLight from "../../assets/groupLogoLight.svg";
 import groupDark from "../../assets/groupLogoDark.svg";
 
 import logoutImg from "../../assets/logout.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Logout } from "../../Data/Authentication";
 
 export default function Header() {
